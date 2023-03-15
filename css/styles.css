@@ -890,6 +890,7 @@ img {
   border-radius: 4px;
   background: #2e2f42;
   padding-left: 16px;
+  color: #ffffff;
 }
 
 .form-subscribe-wrapper {
@@ -915,7 +916,8 @@ img {
   color: #ffffff;
   border-color: #4d5ae5;
   border: none;
-  transition: color var(--transition-dur-func), background-color var(--transition-dur-func);
+  transition: color var(--transition-dur-func), background-color var(--transition-dur-func),
+    border-color var(--transition-dur-func);
   cursor: pointer;
 }
 
