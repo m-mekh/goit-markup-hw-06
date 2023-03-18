@@ -959,22 +959,25 @@ img {
   height: 24px;
 }
 
-.modal-form-field span {
+.modal-form-field {
   width: 360px;
   height: 58px;
-  justify-content: center;
-  align-items: center;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.2;
 
   letter-spacing: 0.04em;
 
+  /* LIGHT SLATE */
+
   color: #8e8f99;
-  margin-bottom: 4px;
+  padding-bottom: 4px;
 }
 
+.name-form-field {
+}
 .form-input {
+  display: flex;
   padding-left: 32px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -982,6 +985,7 @@ img {
   width: 100%;
   height: 40px;
   background: #fcfcfc;
+  padding-top: 4px;
 }
 
 .form-input:focus {
@@ -1008,9 +1012,14 @@ img {
   display: block;
   width: 360px;
   height: 120px;
-  padding: 16px;
+  padding: 8px 16px;
   margin-bottom: 16px;
-  resize: vertical;
+  resize: none;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .form-policy {
@@ -1023,15 +1032,19 @@ img {
   margin-bottom: 16px;
 }
 
-.modal-form-policy::before {
+.form-policy {
   display: flex;
-  width: 16px;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+
+  width: 360px;
   height: 16px;
-  content: '';
-  border: 1.25px solid #2e2f42;
-  border-radius: 2px;
-  cursor: pointer;
-  margin-right: 8px;
+  left: 540px;
+  top: 544px;
+
+  border-radius: 4px;
 }
 
 .modal-form-policy {
@@ -1041,9 +1054,78 @@ img {
   line-height: 1.2;
   letter-spacing: 0.04em;
   color: #757575;
+  align-items: center;
 
   justify-content: center;
   background-color: transparent;
+}
+
+.modal-form-policy::before {
+  content: '';
+
+  width: 16px;
+  height: 16px;
+
+  border: 1.25px solid #2e2f42;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.text-policy {
+  display: flex;
+  width: 338px;
+  height: 16px;
+  gap: 8px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+
+  letter-spacing: 0.04em;
+
+  color: #757575;
+}
+.checkbox-policy {
+  display: flex;
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+
+  border: 1.25px solid #2e2f42;
+  border-radius: 2px;
+}
+
+.checkbox-policy:checked + .modal-form-policy::before {
+  background-color: #31d0aa;
+}
+
+.icon-checkbox {
+  display: inline-block;
+
+  background-position: center;
+  border-radius: 2px;
+}
+
+/* .icon-form {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.3;
+
+  letter-spacing: 0.04em;
+  text-decoration-line: underline;
+
+  color: #4d5ae5;
+  width: 338px;
+  height: 16px;
+} */
+
+.checkbox-policy:checked + .icon-checkbox {
+  background-image: url(../images/icons.svg#icon-vector);
+  border: #404bbf;
+  background: #404bbf;
 }
 
 .form-modal-btn {
