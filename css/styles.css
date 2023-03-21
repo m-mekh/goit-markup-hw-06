@@ -617,21 +617,8 @@ img {
 
 .visually-hidden {
   position: absolute;
-  top: -150%;
-  z-index: -100;
-  width: 0;
-  height: 0;
-  opacity: 0;
-  visibility: hidden;
-  user-select: none;
-  pointer-events: none;
-  cursor: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  border: none;
-  outline: none;
-  white-space: nowrap;
+
+  appearance: none;
 }
 
 .main-button-projects .main-section-btn {
@@ -1109,27 +1096,25 @@ textarea {
   background-color: #fcfcfc;
 }
 
-.checkbox-policy:checked + .modal-form-policy::before {
-  background-image: url(../images/vector.svg);
-  border-color: var(--hover-focus-color);
-  background-color: var(--hover-focus-color);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 10px 8px;
-}
-
 .checkbox-policy {
   display: flex;
   width: 16px;
   height: 16px;
 
-  border: 1.25px solid #2e2f42;
+  /* border: 1.25px solid #2e2f42; */
   border-radius: 2px;
 
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   padding-left: 0;
+}
+
+.form-policy-text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+
+  letter-spacing: 0.04em;
+
+  color: #757575;
 }
 
 .form-link {
@@ -1146,6 +1131,20 @@ textarea {
 
 .form-link-name {
   margin-left: 8px;
+}
+
+.checkbox-policy:checked + .modal-form-policy::before {
+  background-image: url(../images/vector.svg);
+  border-color: var(--hover-focus-color);
+  background-color: var(--hover-focus-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px 8px;
+}
+
+.checkbox-policy:focus + .modal-form-policy::before {
+  outline: none;
+  border-color: #4d5ae5;
 }
 
 .form-modal-btn {
