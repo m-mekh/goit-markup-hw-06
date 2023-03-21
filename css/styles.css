@@ -323,7 +323,7 @@ img {
   background: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transition: border-color var(--transition-dur-func);
+  transition: border-color var(--transition-dur-func), background-color var(--transition-dur-func);
 }
 
 .modal-hero-btn:hover .icon-modal-btn,
@@ -852,6 +852,7 @@ img {
 .footer-social-link:is(:hover, :focus) {
   background-color: #31d0aa;
 }
+
 .footer-social-icon {
   fill: #fff;
 }
@@ -970,6 +971,7 @@ img {
   margin-bottom: 4px;
   display: block;
 }
+
 .form-input {
   display: flex;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -1005,6 +1007,11 @@ img {
   fill: #4d5ae5;
 }
 
+input {
+  outline: none;
+  border: 1.25px solid #404bbf;
+}
+
 textarea {
   resize: none;
   height: 120px;
@@ -1035,6 +1042,7 @@ textarea {
   letter-spacing: 0.04em;
   color: rgba(0, 0, 0, 1);
   outline: none;
+  transition: border-color var(--transition-dur-func);
 }
 
 .form-comment {
@@ -1051,6 +1059,7 @@ textarea {
 .form-field-comment:focus {
   border-color: #4d5ae5;
   fill: #4d5ae5;
+  outline: none;
 }
 
 .form-policy {
@@ -1092,8 +1101,6 @@ textarea {
   border-radius: 2px;
   cursor: pointer;
   margin-right: 8px;
-
-  background-color: #fcfcfc;
 }
 
 .checkbox-policy {
@@ -1101,7 +1108,7 @@ textarea {
   width: 16px;
   height: 16px;
 
-  /* border: 1.25px solid #2e2f42; */
+  border: 1.25px solid #2e2f42;
   border-radius: 2px;
 
   padding-left: 0;
@@ -1133,6 +1140,12 @@ textarea {
   margin-left: 8px;
 }
 
+.form-link:hover,
+.form-link:focus {
+  color: var(--hover-focus-color);
+  outline: 0;
+}
+
 .checkbox-policy:checked + .modal-form-policy::before {
   background-image: url(../images/vector.svg);
   border-color: var(--hover-focus-color);
@@ -1147,12 +1160,8 @@ textarea {
   border-color: #4d5ae5;
 }
 
-.form-modal-btn {
-  display: flex;
-  justify-content: center;
-}
-
 .submit-btn {
+  display: block;
   color: #ffffff;
   background-color: #4d5ae5;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -1160,10 +1169,12 @@ textarea {
   padding: 16px 32px;
   width: 169px;
   height: 56px;
-
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
   border: none;
-  transition: background-color var(--transition-dur-func), color var(--transition-dur-func);
+  transition: background-color var(--transition-dur-func), color var(--transition-dur-func),
+    border-color var(--transition-dur-func);
   cursor: pointer;
   border-color: #4d5ae5;
 }
@@ -1172,4 +1183,6 @@ textarea {
 .submit-btn:focus {
   background-color: var(--hover-focus-color);
   color: white;
+  border-color: #4d5ae5;
+  outline: none;
 }
